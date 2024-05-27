@@ -12,32 +12,30 @@ function disableselect(e) {
     document.onmouseup = reEnable;
   }
 
-  function initServerData(serverIp){
-    const serverIpElement = document.getElementById('server-ip');
-    serverIpElement.innerHTML = (serverIp);
-  
-    console.log('https://api.mcstatus.io/v2/status/bedrock/'+serverIp);
-    fetch('https://api.mcstatus.io/v2/status/bedrock/'+serverIp)
+  fetch('https://api.mcstatus.io/v2/status/bedrock/SERVER.NIXVIP.TOP')
     .then(response => response.json())
-    .then(data => handleServerStatus(data));
+    .then(data => handleServerStatus(data))
   
-    function handleServerStatus(data){
-        if(data.status=='error'){
-            console.log(data.error);
-            return false;
-        }
+  function handleServerStatus(data){
+      if(data.status=='error'){
+          console.log(data.error);
+          return false;
+      }
+        
+      const serverIpElement = document.getElementById('server-ip');
+      serverIpElement.innerHTML = (data.host);
+
+      const version = document.getElementById("version");
+      version.innerHTML = `Minecraft Bedrock เวอร์ชัน `+(data.version.name);
   
-        const version = document.getElementById("version");
-        version.innerHTML = `Minecraft Bedrock เวอร์ชัน `+(data.version.name);
+      const playerCounter = document.getElementById("player-count");
+      playerCounter.innerHTML = `( ออนไลน์ `+(data.players.online)+` คน )`;
   
-        const playerCounter = document.getElementById("player-count");
-        playerCounter.innerHTML = `ออนไลน์ `+(data.players.online)+` คน`;
+      const addServer = document.getElementById("add-server");
+      addServer.innerHTML = `<div class="arrow"></div>
+      <a href="minecraft:?addExternalServer=Nixvip|server.nixvip.top:19132" ><button class="button">เพิ่มเซิฟเวอร์</button></a>`;
   
-        const addServer = document.getElementById("add-server");
-        addServer.innerHTML = `<a href="minecraft:?addExternalServer=Nixvip|server.nixvip.top:19132" ><button class="button">เพิ่มเซิฟเวอร์</button></a>`;
+      const logo = document.getElementById("server-icon");
+      logo.src = (data.favicon);
+  } 
   
-        const logo = document.getElementById("server-icon");
-        logo.src = (data.favicon);
-    } 
-  
-  }

@@ -38,19 +38,20 @@ header {
 
 .font2 {
     /* border: 1px solid red; */
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
 }
 
 .font3 {
     /* border: 1px solid red; */
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.495);
     text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
 }
 
 .btn-group .button {
-  margin-top: 1.2rem;
+  margin-top: 6rem;
   background-color: #04AA6D; /* Green */
   border: none;
   color: white;
@@ -130,7 +131,7 @@ footer p {
     /* border: 1px solid red; */
     width: 40px;
     height: 40px;
-    top: 35%;
+    top: 51vh;
     margin: -20px 0 0 -20px;
     transform: rotate(45deg);
     border-left: none;
@@ -143,8 +144,8 @@ footer p {
     content: "";
     width: 20px;
     height: 20px;
-    top: 40%;
-    margin: -8px 0 0 -12px;
+    top: 1.5vh;
+    margin: -5px 0 0 -10px;
     border-left: none;
     border-top: none;
     border-right: 1px #fff solid;
@@ -168,11 +169,30 @@ footer p {
     .social-items {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .font1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+    }
+
+    .font2 {
+        /* border: 1px solid red; */
+        font-size: 1.2rem;
+        text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+    }
+    
+    .font3 {
+        /* border: 1px solid red; */
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .font1 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bold;
         text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
     }
