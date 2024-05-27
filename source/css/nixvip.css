@@ -45,115 +45,48 @@ header {
 .font3 {
     /* border: 1px solid red; */
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     color: rgba(255, 255, 255, 0.495);
     text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
 }
 
-.btn-group .button {
-  margin-top: 6rem;
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
-}
-
-.btn-group .button:hover {
-  background-color: #3e8e41;
-}
-
-.social {
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-items {
-    /* border: 1px solid red; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    min-height: 40vh;
-    width: 100vw;
-    height: 40vh;
-    background: #e2e2e2ec;
-    box-shadow: 0px 0px 0px 1px rgb(0, 0, 0),0 0 18px 0 rgba(0, 0, 0, 0.75) inset;
-    /* border-radius:15px; */
-}
-
-.social-items-frame {
-    /* border: 1px solid red; */
-    padding: 1rem;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-items img {
-    /* border: 1px solid red; */
-    height: calc(.5vw + 8vh + .5vmin);
-}
-
-footer {
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 6vh;
-    width: 100vw;
-    height: 6vh;
-}
-
-footer p {
-    /* border: 1px solid red; */
-    text-align: center;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.495);
+.button {
+    margin-top: 1rem;
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #ff0000;
+    font-family: "K2D", sans-serif;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
-    
-}
+  }
+  
+  .button:hover,
+  .button:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
 
-.arrow,
-.arrow:before {
-  position: absolute;
-  left: 50%;
-}
-
-.arrow {
-    /* border: 1px solid red; */
-    width: 40px;
-    height: 40px;
-    top: 51vh;
-    margin: -20px 0 0 -20px;
-    transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
-}
- 
-.arrow:before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    top: 1.5vh;
-    margin: -5px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 1px #fff solid;
-    border-bottom: 1px #fff solid;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
-}
+  }
+  
+  .button:active {
+    background: var(--color);
+    color: #fff;
+  }
 
 @keyframes arrow {
   0% {

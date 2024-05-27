@@ -32,8 +32,7 @@ function disableselect(e) {
       playerCounter.innerHTML = `( ออนไลน์ `+(data.players.online)+` คน )`;
   
       const addServer = document.getElementById("add-server");
-      addServer.innerHTML = `<div class="arrow"></div>
-      <a href="minecraft:?addExternalServer=Nixvip|server.nixvip.top:19132" ><button class="button">เพิ่มเซิฟเวอร์</button></a>`;
+      addServer.innerHTML = `<a href="minecraft:?addExternalServer=Nixvip|server.nixvip.top:19132" ><button class="button"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มเซิฟเวอร์</button></a>`;
   
       const logo = document.getElementById("server-icon");
       logo.src = (data.favicon);
