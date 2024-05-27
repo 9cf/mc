@@ -130,7 +130,7 @@ footer p {
     /* border: 1px solid red; */
     width: 40px;
     height: 40px;
-    top: 40%;
+    top: 35%;
     margin: -20px 0 0 -20px;
     transform: rotate(45deg);
     border-left: none;
@@ -143,8 +143,8 @@ footer p {
     content: "";
     width: 20px;
     height: 20px;
-    top: 50%;
-    margin: -10px 0 0 -10px;
+    top: 40%;
+    margin: -8px 0 0 -12px;
     border-left: none;
     border-top: none;
     border-right: 1px #fff solid;

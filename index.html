@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="https://nixvip.top/source/img/nixvip_icon.png">
     <link rel="stylesheet" href="./source/css/nixvip.css">
     <script src="./source/js/nixvip.js"></script>
-
  
     <!-- HTML Meta Tags -->
     <title>I am Nixvip</title>
@@ -30,51 +29,18 @@
 </head>
 
 <body>
-
     <header>
+        <div class="arrow"></div>
         <div class="header-info">
             <div class="font1" id="server-ip">เซิฟเวอร์ปิดอยู่</div>
             <div class="font2" id="version"> </div>
             <div class="font3" id="player-count"> </div>
             <!--<a href="#">More</a>-->
         </div>
-        <!--<div class="arrow"></div>-->
+        <div class="arrow"></div>
             <div class="btn-group" id="add-server">
             </div>
     </header>
-
-<script>
-function initServerData(serverIp){
-  const serverIpElement = document.getElementById('server-ip');
-  serverIpElement.innerHTML = serverIp;
-
-  console.log('https://api.mcstatus.io/v2/status/bedrock/'+serverIp);
-  fetch('https://api.mcstatus.io/v2/status/bedrock/'+serverIp)
-  .then(response => response.json())
-  .then(data => handleServerStatus(data));
-
-  function handleServerStatus(data){
-      if(data.status=='error'){
-          console.log(data.error);
-          return false;
-      }
-
-      const version = document.getElementById("version");
-      version.innerHTML = `Minecraft Bedrock เวอร์ชัน `+(data.version.name);
-
-      const playerCounter = document.getElementById("player-count");
-      playerCounter.innerHTML = `ออนไลน์ `+(data.players.online)+` คน`;
-
-      const addServer = document.getElementById("add-server");
-      addServer.innerHTML = `<a href="minecraft:?addExternalServer=Nixvip|server.nixvip.top:19132" ><button class="button">เพิ่มเซิฟเวอร์</button></a>`;
-
-      const logo = document.getElementById("server-icon");
-      logo.src = (data.favicon);
-  } 
-
-}
-
-initServerData("server.nixvip.top");
-</script>
 </body>
 </html>
+<script>initServerData("SERVER.NIXVIP.TOP");</script>
