@@ -29,11 +29,25 @@ header {
     align-items: center;
 }
 
+.box {
+    border: 1px solid rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background-color: #1d1d1dcb;
+    border-radius: 15px;
+    box-shadow: 1px 1px 9px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 9px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 9px 3px rgba(0,0,0,0.75);
+}
+
 .font1 {
     /* border: 1px solid red; */
     font-size: 4.5rem;
     font-weight: bold;
     text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+    margin: 10px 20px 0 20px;
 }
 
 .font2 {
@@ -45,7 +59,7 @@ header {
 .font3 {
     /* border: 1px solid red; */
     font-size: 1.2rem;
-    margin-top: 1rem;
+    margin: 10px 0 20px 0;
     color: rgba(255, 255, 255, 0.495);
     text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
 }
